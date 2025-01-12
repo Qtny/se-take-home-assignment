@@ -36,3 +36,9 @@ You may demostrate your final funtioning prototype with **one and only one** of 
 - Testing, testing and testing. Make sure the prototype is functioning and meeting all the requirements.
 - Do not over engineering. Try to scope your working hour within 3 hours (1 hour per day). You may document all the optimization or technology concern that you think good to bring in the solution.
 - Complete the implementation as clean as possible, clean code is a strong plus point, do not bring in all the fancy tech stuff.
+
+### Future Improvements
+- This project can be integrated with a queue system such as RabbitMQ or AWS SQS, coupled with a event driven AWS SNS to trigger whenever an order is added. This can ensure all orders are captured and retried even when the system goes down.
+- Data persistence can be added to retain the information.
+- Though there is no backend code within this project, ideally the front and backend source code could be separated. The backend code could dockerized and deployed onto a container orchestration service such as Kubernetes, to ensure scalability and low downtime during deployment.
+- When more features are added, the project could be written into a microservice architecture to ensure better scalability.
