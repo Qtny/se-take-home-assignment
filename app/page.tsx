@@ -79,9 +79,14 @@ export default function Home() {
   function RemoveBotButton() {
     function destroyBot() {
       console.log("destroying bot");
-      const oldestBot = orderBots[0];
+      const lastBotIdx = orderBots.length - 1
+      const oldestBot = orderBots[lastBotIdx];
       oldestBot.stopPreparing();
-      setOrderBots((prev) => prev.slice(1))
+      setOrderBots((prev) => { 
+        const tempArr = [...prev];
+        tempArr.pop();
+        return tempArr
+       })
     }
 
     return (
